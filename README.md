@@ -25,10 +25,11 @@ This is a test project built with NestJS and Prisma, demonstrating a simple user
 
 ```sh
 git clone https://github.com/EdvardSolomon/Products-api
-cd test-project
+cd products-api
 ```
 
 2. Install dependencies:
+
 ```sh
 npm install
 # or
@@ -36,22 +37,23 @@ yarn install
 ```
 
 3. Set up the environment variables:
-Create a .env file in the root directory and add the following variables:
+   Create a copy of the .env.example file and rename it to .env. Update the file with your own values:
+
 ```sh
-DATABASE_URL=postgresql://USER:PASSWORD@HOST:PORT/DATABASE
-JWT_SECRET=your_jwt_secret
-PEPPER=your_pepper
-PORT=3000
+cp .env.example .env
 ```
-Replace USER, PASSWORD, HOST, PORT, and DATABASE with your PostgreSQL database credentials.
+
+Edit the .env file with your database credentials and other configuration values.
 
 4. Run Prisma migrations:
+
 ```sh
 npx prisma migrate dev
 ```
 
 Running the Application
 Start the development server:
+
 ```sh
 npm run start:dev
 # or
@@ -74,6 +76,7 @@ test: Contains test files for the application
 
 Running Tests
 To run the tests, use the following command:
+
 ```sh
 npm run test
 # or
