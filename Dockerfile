@@ -1,4 +1,3 @@
-# Встановлення базового образу
 FROM node:18-alpine
 
 WORKDIR /app
