@@ -17,7 +17,6 @@ async function bootstrap() {
     }),
   );
 
-  app.use(helmet());
   app.enableCors();
 
   const options = new DocumentBuilder()
@@ -34,6 +33,8 @@ async function bootstrap() {
       persistAuthorization: true,
     },
   });
+
+  app.use(helmet());
 
   await app.listen(config.PORT);
 }
