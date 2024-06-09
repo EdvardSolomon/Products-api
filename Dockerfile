@@ -10,6 +10,7 @@ RUN yarn
 COPY . .
 
 RUN npx prisma generate
+RUN yarn prisma:migrate
 
 RUN yarn build
 
