@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { AuthController } from './auth.controller';
 import { AuthService } from './auth.service';
-import { LoginDto, RegisterDto } from './dto';
+import { RegisterDto } from './dto';
 import { UserEntity } from '../users/entities/user.entity';
 import { BadRequestException, HttpStatus } from '@nestjs/common';
 

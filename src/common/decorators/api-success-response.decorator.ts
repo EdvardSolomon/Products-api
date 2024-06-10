@@ -1,4 +1,3 @@
-// src/common/decorators/api-success-response.decorator.ts
 import { applyDecorators } from '@nestjs/common';
 import { ApiResponse } from '@nestjs/swagger';
 

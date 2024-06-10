@@ -1,4 +1,3 @@
-// src/products/products.service.spec.ts
 import { Test, TestingModule } from '@nestjs/testing';
 import { ProductsService } from './products.service';
 import { PrismaService } from '../prisma/prisma.service';
