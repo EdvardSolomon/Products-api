@@ -45,6 +45,24 @@ cp .env.example .env
 
 Edit the .env file with your database credentials and other configuration values.
 
+Example .env file:
+
+```sh
+DATABASE_URL=your_database_url
+JWT_SECRET=your_jwt_secret
+PEPPER=your_pepper
+PORT=your_port
+```
+
+For hosting, you can use the provided .env.template file:
+
+```sh
+DATABASE_URL=%/app/db/url%
+JWT_SECRET=%/app/jwt/secret%
+PEPPER=%/app/pepper%
+PORT=%/app/port%
+```
+
 4. Run Prisma migrations:
 
 ```sh
@@ -82,3 +100,8 @@ npm run test
 # or
 yarn test
 ```
+
+Hosting Information
+The project is hosted and available for testing at the following URL:
+
+[Products API](http://products-api-alb-1816576247.eu-central-1.elb.amazonaws.com/api)
