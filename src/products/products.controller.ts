@@ -16,6 +16,7 @@ import { ApiBearerAuth, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { JwtAuthGuard } from '../auth/guard/jwt-auth.guard';
 import { CreateProductDto, UpdateProductDto } from './dto';
 import {
+  ApiCreatedResponse,
   ApiNotFoundResponse,
   ApiSuccessResponse,
   ApiUnauthorizedResponse,
@@ -53,7 +54,7 @@ export class ProductsController {
   }
 
   @ApiOperation({ summary: 'Create a new product' })
-  @ApiSuccessResponse(ProductEntity, 'The created product')
+  @ApiCreatedResponse(ProductEntity, 'The created product')
   @ApiUnauthorizedResponse('Unauthorized')
   @Post()
   create(@Body() createProductDto: CreateProductDto): Promise<Product> {

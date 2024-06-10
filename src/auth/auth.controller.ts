@@ -14,6 +14,7 @@ import { LoginDto, RegisterDto } from './dto';
 import { AuthGuard } from '@nestjs/passport';
 import {
   ApiBadRequestResponse,
+  ApiCreatedResponse,
   ApiSuccessResponse,
   ApiUnauthorizedResponse,
 } from '../common/decorators';
@@ -36,7 +37,7 @@ export class AuthController {
   }
 
   @ApiOperation({ summary: 'Registration' })
-  @ApiSuccessResponse([UserEntity], 'User data')
+  @ApiCreatedResponse([UserEntity], 'User data')
   @ApiBadRequestResponse('Bad Request')
   @Post('register')
   async register(@Body() registerDto: RegisterDto) {
